@@ -1,0 +1,33 @@
+<div class="d-flex flex-column registration-input-wrap">
+    <div>
+        <span class="mx-1">Логин</span>
+        <input id="login" type="text"  pInputText  [(ngModel)]="login" (keyup)="checkLoginInput()"/>
+        <small id="login-help" class="hide" style="color: red;">Логин должен содержать не менне 3 символов.</small>
+    </div>
+    <div class="mt-2">
+        <span class="mx-1">Пароль</span>
+        <input id="password" (keyup)="checkPasswordInput()" type="password" pInputText [(ngModel)]="password" />
+        <small id="password-help" class="hide mx-1" style="color: red;">Пароль должен содержать не менне 3 символов.</small>
+    </div>
+
+
+    <div class="mt-2">
+        <span class="mx-1">Подтверждение пароля</span>
+        <input id="passwordRepeat" (keyup)="checkPasswordRepeat()" type="password" pInputText [ngClass]="{'input-error': !password_repeat}"
+            [(ngModel)]="password_repeat" />
+        <small id="passwordRepeat-help" class="hide mx-1" style="color: red;">Пароли не совпадают.</small>    
+    </div>
+
+    <div class="mt-2">
+        <span class="mx-1">Почта</span>
+        <input type="text" pInputText [(ngModel)]="email" />
+    </div>
+
+</div>
+<!-- [disabled]="!login || !password || !password_repeat" -->
+<div>
+    <button id="regButton" type="button" (click)="registration($event)" [disabled]="buttonDisabled"
+        class='my-3 btn btn-primary'>
+        Зарегестрироваться</button>
+</div>
+

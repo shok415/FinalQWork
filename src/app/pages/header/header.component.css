@@ -1,0 +1,99 @@
+.main-container{
+    display: flex;
+    flex: 1;
+}
+
+.headcard{
+    border-radius: 0; 
+    border: 0;
+}
+
+.menu-button{
+    border: 0;
+    background-color: rgb(194, 243, 235); 
+}
+
+.logo-button{
+    border: 0;
+    background-color: rgb(194, 243, 235); 
+}
+
+.menu-button:hover{
+    /* border: 3 solid  rgb(137, 238, 221); */
+    background-color: rgb(137, 238, 221);
+    border-radius: 15%;
+    box-shadow: 0 0 5px 2px rgb(137, 238, 221);
+}
+
+.header-container{
+    background-color: rgb(194, 243, 235); 
+    width: 100%;
+    height: 60px;
+    position: sticky;
+    display: grid;
+    grid-template-columns: 50px minmax(0, 500px) 178px;
+    justify-content: space-between;
+    transform: translate3d(0, 0, 0);
+}
+
+.section-left{
+    display: flex;
+    grid-row: 1;
+    align-items: center;
+}
+
+.menu-button{
+    height: 50%;
+    margin-left: 20px;
+}
+
+.section-center{
+    display: flex;
+    grid-row: 1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-field{
+    width: 380px;
+}
+::ng-deep .p-inputtext{
+    width: 100%;
+}
+
+.section-right{
+    display: flex;
+    grid-row: 1;
+    align-items: center;
+    justify-content: end;
+    margin-right: 15px;
+}
+
+::ng-deep .p-menu{
+z-index: 1;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.dropdown-menu{
+    margin-top: 15px !important;
+}
+
+.button-create{
+    height: 40px;
+    border: none;
+    border-radius: 11px;
+    background-color: white;
+}
+
+.logo{
+    margin-left: 15px;
+    height: 32px;
+}

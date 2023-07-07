@@ -1,0 +1,42 @@
+<div class="card headcard">
+    <div class="header-container">
+        <div class="section-left">
+            <button class="menu-button" (click)="hideSideMenu()">
+                <i class="fa fa-bars fa-lg" aria-hidden="false"></i>
+            </button>
+            <button class="logo-button" (click)="goHome()">
+                <img src="../../../assets/img/logo.png" class="logo" >
+            </button>
+        </div>
+        <div class="section-center">
+            <div class="search-field">
+                <input class="search" type="text" pInputText placeholder="Search" class="w-full" />
+            </div>
+            <button class="button-create" data-bs-toggle="modal" data-bs-target="#createPost">
+                <div class="fa fa-pencil" aria-hidden="true"> Создать</div>
+            </button>
+        </div>
+        <div class="section-right">
+            <div *ngIf="user.id">
+            <div id="profile-menu" class="dropdown">
+                <button class="menu-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="fa fa-user" aria-hidden="true">{{user.login}}</div>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><button class="dropdown-item" (click)="goToProfile()"><i class="fa fa-user"></i> Профиль</button></li>
+                    <li><button class="dropdown-item" routerLink="profile"><i class="fa fa-cog"></i> Настройки</button></li> 
+                    <li><button class="dropdown-item"><i class="fa fa-sign-out"></i> Выйти</button></li>
+                </ul>
+            </div>
+            </div>
+            <div *ngIf="!user.id">
+            <button id="login-button" class="menu-button" data-bs-toggle="modal" data-bs-target="#authModal">
+                <i class="fa fa-sign-in" aria-hidden="true"> Войти</i>
+            </button>
+           </div>
+        </div>
+    </div>
+</div>
+
+
+

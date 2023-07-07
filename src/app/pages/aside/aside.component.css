@@ -1,0 +1,16 @@
+::ng-deep .p-menu{
+    border-radius: 0; 
+    border: 0;
+    padding: 0 10px;
+    margin-top: 12px;
+
+}
+
+::ng-deep .p-menuitem{
+    border-radius: 55% !important;
+}
+
+.hide{
+    display: none;
+    width: 0px;
+}

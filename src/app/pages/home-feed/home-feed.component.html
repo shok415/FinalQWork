@@ -1,1 +1,81 @@
-<p>home-feed works!</p>
+<div class="d-flex flex-column h-100">
+
+  <div class="z-3">
+    <header>
+      <app-header (menuStyle)="getEmit($event)"></app-header>
+    </header>
+  </div>
+
+  <div class="z-0">
+    <div class="main-container">
+
+      <div id="asideMenu" class="asideMenu">
+        <app-aside [menuType]="sideMenuVisible"></app-aside>
+      </div>
+      <div class="feedLine">
+        <div id="page-wrapper" class="page-wrapper">
+          <router-outlet>
+            <div id="test"></div>
+          </router-outlet>
+        </div>
+
+
+      </div>
+      <div class="commentSection">
+        uой культуры, будут функционально разнесены на независимые элементы. В своём стремлении улучшить
+        пользовательский опыт мы упускаем, что явные признаки победы институционализации формируют г
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+  <!-- Auth Modal -->
+  <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="authModalLabel"></h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <app-auth></app-auth>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade modal-lg" id="createPost" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="createPostLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="createPostLabel">Новая запись</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <!-- <div class="mt-2">
+            <span class="mx-1">Заголовок</span>
+            <input type="text" pInputText [(ngModel)]="post.title" />
+          </div>
+
+          <div class="mt-2">
+            <span class="mx-1">Заголовок</span>
+            <input type="text" pInputText [(ngModel)]="post.title" />
+          </div> -->
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+          <button type="button" class="btn btn-primary">Опубликовать</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

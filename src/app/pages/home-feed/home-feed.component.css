@@ -1,0 +1,49 @@
+.main-container{
+    display: flex;
+    flex: 1;
+}
+::ng-deep .p-menubar{
+    border-radius: 0;
+    background-color: rgb(194, 243, 235); 
+    border: 0;
+}
+
+.headcard{
+    border-radius: 0; 
+    border: 0;
+}
+
+.feedLine{
+    flex-grow: 1;
+    position: relative;
+    min-width: 600px;
+}
+
+.asideMenu{
+    position: sticky;
+    width: 220px;
+    flex-shrink: 0;
+}
+
+.commentSection{
+    width: 320px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 3;
+}
+
+.page-wrapper{
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.hide{
+    display: none;
+    width: 0px;
+}
+
+/* .modal-header{
+    border-bottom: 0;
+} */
