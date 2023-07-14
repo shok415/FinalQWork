@@ -35,18 +35,6 @@ export class HomeFeedComponent implements OnInit, OnChanges{
       elem.classList.remove("hide")
     }
   }
-  
-  emitSearch(ev:any): any {
-    //console.log(ev)
-    this.search = ev;
-    // let elem = document.getElementById('asideMenu');
-    // if (this.sideMenuVisible==false && elem){
-    //   elem.classList.add("hide")
-    // }else if(this.sideMenuVisible==true && elem){
-    //   elem.classList.remove("hide")
-    // }
-
-  }
 
   ngOnInit(): void {
     let url = window.location.href;
@@ -106,7 +94,7 @@ export class HomeFeedComponent implements OnInit, OnChanges{
     formParams.append("rating", "0")
     formParams.append("createTime", d.toISOString())
     this.postService.createPost(formParams).subscribe(()=> {})
-    window.location.reload()
+    //window.location.reload()
   }
 
   selectFile(ev:any):void{
