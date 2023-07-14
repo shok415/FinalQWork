@@ -4,28 +4,29 @@
             <button class="menu-button" (click)="hideSideMenu()">
                 <i class="fa fa-bars fa-lg" aria-hidden="false"></i>
             </button>
-            <button class="logo-button" (click)="goHome()">
                 <img src="../../../assets/img/logo.png" class="logo" >
-            </button>
         </div>
         <div class="section-center">
             <div class="search-field">
-                <input class="search" type="text" pInputText placeholder="Search" class="w-full" />
+                <input [(ngModel)]="ticketSearchValue" pInputText class="search" type="text" placeholder="Search" class="w-full" />
             </div>
-            <button class="button-create" data-bs-toggle="modal" data-bs-target="#createPost">
-                <div class="fa fa-pencil" aria-hidden="true"> Создать</div>
-            </button>
+            <button class="search-button" (click)="goFind()">Найти</button>
+            <div *ngIf="user.id">
+                <button class="button-create" data-bs-toggle="modal" data-bs-target="#createPost">
+                    <div class="fa fa-pencil" aria-hidden="true"> Создать</div>
+                </button>
+            </div>
         </div>
         <div class="section-right">
             <div *ngIf="user.id">
             <div id="profile-menu" class="dropdown">
                 <button class="menu-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    <div class="fa fa-user" aria-hidden="true">{{user.login}}</div>
+                    <div class="fa fa-user" aria-hidden="true"></div> {{user.login}}
                 </button>
                 <ul class="dropdown-menu">
                     <li><button class="dropdown-item" (click)="goToProfile()"><i class="fa fa-user"></i> Профиль</button></li>
-                    <li><button class="dropdown-item" routerLink="profile"><i class="fa fa-cog"></i> Настройки</button></li> 
-                    <li><button class="dropdown-item"><i class="fa fa-sign-out"></i> Выйти</button></li>
+                    <!-- <li><button class="dropdown-item" routerLink="profile"><i class="fa fa-cog"></i> Настройки</button></li>  -->
+                    <li><button class="dropdown-item" (click)="logOut()"><i class="fa fa-sign-out"></i> Выйти</button></li>
                 </ul>
             </div>
             </div>

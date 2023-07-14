@@ -1,3 +1,34 @@
+<div class="list-wrapper"> 
+    <div *ngIf="postList">
+        <div class="post-item" *ngFor="let item of postList; let i=index">
+            <div class="post-header">
+                <!-- <div class="header-theme"><strong>Природа</strong></div> -->
+                <div class="header-author"><button class="post-link" (click)="goToProfile(item.authorId)">{{item.authorLogin}}</button></div>
+                <!-- <div class="header-createTime">{{item.createTime}}</div> -->
+                <div class="header-createTime">{{item.createTimeLabel}}</div>
+            </div>
+            <div class="post-title"><button class="post-link" (click)="goToPost(item)"><h4>{{item.title}}</h4></button></div>
+            <div *ngIf="item.img">
+                <div class="post-img-container"><img class="post-img" src="http://localhost:5400/public/{{item.img}}" /></div>
+            </div>
+            <div class="post-body">{{item.body}}</div>
 
-fdsfsdfsdf
+            
+            <div class="post-footer">
+                <!-- <div class="comment-count">
+                    <i class="fa-regular fa-comment"></i>
+                    
+                </div> -->
+                <div class="post-bookmark">
+                    <button class="post-link" (click)="addToBookmark(item)">
+                        <i class="fa-regular fa-bookmark" style="width: 16px; text-align: center;"></i>
+                    </button>
+                </div>
+            </div>
+         </div> 
+    </div>
+</div>
+
+
+
 

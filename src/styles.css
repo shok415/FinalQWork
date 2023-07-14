@@ -6,3 +6,6 @@ body{
     box-sizing: border-box;
     margin: 0;
 }
+html{
+    background-color: rgb(238 239 238) !important;
+}

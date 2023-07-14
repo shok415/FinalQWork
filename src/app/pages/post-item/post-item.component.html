@@ -1,0 +1,53 @@
+<div class="list-wrapper">
+    <div *ngIf="post">
+        <div class="post-item">
+            <div class="post-header">
+                <div class="header-theme"><strong>Природа</strong></div>
+                <div class="header-author">{{post.authorLogin}}</div>
+                <div class="header-createTime">{{post.createTimeLabel}}</div>
+            </div>
+            <div class="post-title">
+                <h4>{{post.title}}</h4>
+            </div>
+            <div *ngIf="post.img">
+                <div class="post-img-container"><img class="post-img" src="http://localhost:5400/public/{{post.img}}" />
+                </div>
+            </div>
+            <div class="post-body">{{post.body}}</div>
+
+        </div>
+
+        <div class="post-item">
+            <div class="comment-section-header">
+                <div class="comment-count">
+                    Количество комментариев: {{commentCount}} 
+                </div>
+                <div class="comment-button">
+                    <button class="button-create" data-bs-toggle="modal" data-bs-target="#createComment">
+                        <div class="fa fa-pencil" aria-hidden="true">Добавить комментарий</div>
+                    </button>
+                </div>
+            </div>
+
+
+            <div *ngIf="commentsList"> 
+                <div class="post-item" *ngFor="let item of commentsList; let i=index">
+
+                    <div class="comment-header">
+                        <div class="comment-author">
+                            <strong>{{item.authorLogin}}</strong>
+                        </div>
+                        <div class="comment-time">
+                            {{item.createTimeLabel}}
+                        </div>
+                    </div>
+                    <div class="comment-text">
+                        {{item.text}}
+                    </div>
+
+                 </div> 
+            </div> 
+
+        </div>
+    </div>
+

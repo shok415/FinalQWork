@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeFeedComponent } from './home-feed.component';
 import { PostListComponent } from '../post-list/post-list.component';
 import { ProfileComponent } from '../profile/profile.component';
+import { PostItemComponent } from '../post-item/post-item.component';
 
 const routes: Routes = [
   {
@@ -14,8 +15,24 @@ const routes: Routes = [
         component: PostListComponent, 
       },
       {
-        path: 'profile',
+        path: 'new',
+        component: PostListComponent, 
+      },
+      {
+        path: 'bookmark',
+        component: PostListComponent, 
+      },
+      {
+        path: 'search/:text',
+        component: PostListComponent, 
+      },
+      {
+        path: 'profile/:id',
         component: ProfileComponent
+      },
+      {
+        path: 'post/:id',
+        component: PostItemComponent
       },
       
       // {

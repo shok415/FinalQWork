@@ -14,3 +14,31 @@
     display: none;
     width: 0px;
 }
+
+.side-button{
+width: 200px;
+border: none;
+border-radius: 6px;
+margin-top: 2px;
+margin-bottom: 2px;
+height: 44px;
+text-align: start;
+padding-left: 20px;
+background-color: rgb(238 239 238);
+}
+
+.side-button:hover{
+background-color: #f7f7f7;
+}
+
+.active{
+    background-color: #fff !important;
+}
+
+.active > i {
+    color: rgb(137, 238, 221);
+  }
+
+.menu-list{
+    padding: 10px;
+}

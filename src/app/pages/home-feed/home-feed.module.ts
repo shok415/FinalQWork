@@ -7,16 +7,19 @@ import { HeaderComponent } from '../header/header.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { AsideComponent } from '../aside/aside.component';
 import { MenuModule } from 'primeng/menu';
-import { provideAnimations } from '@angular/platform-browser/animations';
 import { ButtonModule } from 'primeng/button';
 import { AuthComponent } from '../auth/auth.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TabViewModule } from 'primeng/tabview';
 import {ToastModule} from 'primeng/toast';
 import { AuthorizationComponent } from '../auth/authorization/authorization.component';
 import { RegistrationComponent } from '../auth/registration/registration.component';
 import { MessageService } from 'primeng/api';
-
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { PostListModule } from '../post-list/post-list.module';
+import { ProfileModule } from '../profile/profile.module';
+import { PostItemModule } from '../post-item/post-item.module';
+import { CommentSectionComponent } from '../comment-section/comment-section.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,8 @@ import { MessageService } from 'primeng/api';
     AsideComponent,
     AuthComponent,
     AuthorizationComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    CommentSectionComponent
   ],
   imports: [
     CommonModule,
@@ -36,7 +40,12 @@ import { MessageService } from 'primeng/api';
     ButtonModule,
     TabViewModule,
     FormsModule,
-    ToastModule
+    ToastModule,
+    ReactiveFormsModule,
+    InputTextareaModule,
+    PostListModule,
+    ProfileModule,
+    PostItemModule
   ],
   providers:[
     MessageService]

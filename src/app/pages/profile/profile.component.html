@@ -1,3 +1,48 @@
-<div id="cont11">
-    <p>profile works!</p>
+<div class="profile-wrapper">
+    <div class="profile-header">
+        <img class="profile-img" src="http://localhost:5400/public/def-logo.png" />
+        <div class="profile-buttons"><button>Подписаться</button></div>
+    </div>
+     <div *ngIf="user"> 
+        <div class="profile-name">
+            <h3>{{user.login}}</h3>
+        </div>
+    </div> 
 </div>
+
+    <p-tabView id="tab">
+        <p-tabPanel header="Список постов"> 
+            
+             <div *ngIf="postsList"> 
+                <div class="post-item" *ngFor="let item of postsList; let i=index">
+                    <div class="post-header">
+                        <div class="header-theme"><strong>Природа</strong></div>
+                        <div class="header-author">{{item.authorLogin}}</div>
+                        <div class="header-createTime">{{item.createTimeLabel}}</div>
+                    </div>
+                    <div class="post-title"><button class="post-link" (click)="goToPost(item)"><h4>{{item.title}}</h4></button></div>
+                    <div *ngIf="item.img">
+                        <div class="post-img-container"><img class="post-img" src="http://localhost:5400/public/{{item.img}}" /></div>
+                    </div>
+                    <div class="post-body">{{item.body}}</div>
+        
+                    
+                    <div class="post-footer">
+                        <div class="comment-count">
+                            <i class="fa-regular fa-comment"></i>
+                            
+                        </div>
+                        <div class="post-bookmark">
+                            <i class="fa-regular fa-bookmark" style="width: 16px; text-align: center;"></i>
+                        </div>
+                    </div>
+                 </div> 
+             </div> 
+
+
+
+        </p-tabPanel>
+    </p-tabView>    
+
+
+    

@@ -1,6 +1,7 @@
 .main-container{
     display: flex;
     flex: 1;
+    background-color: rgb(238 239 238);
 }
 ::ng-deep .p-menubar{
     border-radius: 0;
@@ -26,7 +27,7 @@
 }
 
 .commentSection{
-    width: 320px;
+    /* width: 320px; */
     flex-shrink: 0;
     position: relative;
     z-index: 3;
@@ -36,7 +37,7 @@
     width: 100%;
     max-width: 640px;
     margin: 0 auto;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .hide{
@@ -44,6 +45,3 @@
     width: 0px;
 }
 
-/* .modal-header{
-    border-bottom: 0;
-} */

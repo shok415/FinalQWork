@@ -31,7 +31,7 @@
     height: 60px;
     position: sticky;
     display: grid;
-    grid-template-columns: 50px minmax(0, 500px) 178px;
+    grid-template-columns: 240px minmax(0, 500px) 178px;
     justify-content: space-between;
     transform: translate3d(0, 0, 0);
 }
@@ -66,7 +66,7 @@
     display: flex;
     grid-row: 1;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
     margin-right: 15px;
 }
 
@@ -92,7 +92,14 @@ z-index: 1;
     border-radius: 11px;
     background-color: white;
 }
-
+.search-button{
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 40px;
+    border: none;
+    border-radius: 11px;
+    background-color: white; 
+}
 .logo{
     margin-left: 15px;
     height: 32px;

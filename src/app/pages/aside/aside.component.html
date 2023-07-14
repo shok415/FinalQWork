@@ -1,3 +1,31 @@
   <div id="sideMenu">
-      <p-menu class="test" [model]="sideitems" ></p-menu>
+      <!-- <p-menu class="test" [model]="sideitems" ></p-menu> -->
+      <div class="menu-list">
+        <!-- <button id="popular" type="button" class="side-button" (click)="goPopular()">
+          <i class="fa-solid fa-fire" style="width: 16px; text-align: center;"></i>
+          Популярное
+        </button> -->
+        <button id="new" type="button" class="side-button" (click)="goNew()">
+          <i class="fa-regular fa-clock" style="width: 16px; text-align: center;"></i>
+          Свежее
+        </button>
+        <!-- <button type="button" class="side-button" >
+          <i class="fa-regular fa-address-book" style="width: 16px; text-align: center;"></i>
+          Моя лента 
+        </button> -->
+        <button id="bookmark" type="button" class="side-button" (click)="gobookmarks()">
+          <i class="fa-regular fa-bookmark" style="width: 16px; text-align: center;"></i>
+          Закладки
+        </button>
+      </div>
+
+      <!-- <div class="list-group">
+        <button type="button" class="list-group-item-action active" aria-current="true">
+          The current button
+        </button>
+        <button type="button" class="list-group-item-action">A second button item</button>
+        <button type="button" class="list-group-item list-group-item-action">A third button item</button>
+        <button type="button" class="list-group-item list-group-item-action">A fourth button item</button>
+        <button type="button" class="list-group-item list-group-item-action" disabled>A disabled button item</button>
+      </div> -->
   </div>

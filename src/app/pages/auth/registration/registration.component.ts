@@ -28,19 +28,25 @@ export class RegistrationComponent implements OnInit {
 
   registration(ev: Event): void | boolean {
 
+    let d = new Date()
+    var datestring = ("0" + d.getDate()).slice(-2) + "-" + ("0"+(d.getMonth()+1)).slice(-2) + "-" +
+    d.getFullYear() + " " + ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2);
+    
+
     const userObj: IUser = {
       password: this.password,
       login: this.login,
-      email: this.email
+      email: this.email,
+      registrationDate: datestring
     }
 
     this.http.post<IUser>('http://localhost:5400/user/', userObj).subscribe((data) => {
       this.messageService.add({ severity: 'success', summary: 'Регистрация прошла успешно' });
+      window.location.reload()
     }, (err: HttpErrorResponse) => {
       const serverError = <ServerError>err.error;
       this.messageService.add({ severity: 'warn', summary: serverError.errorText });
     });
-
   }
 
   checkLoginInput() {

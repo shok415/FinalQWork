@@ -1,8 +1,11 @@
 export interface IPost{
-    id:string,
+    _id:string,
     title:string,
-    imgTitle:string,
-    body:string,
-    authorID:string,
-    rating:number
+    img:string,
+    body:object,
+    authorId:string,
+    authorLogin:string,
+    rating:number,
+    createTime:string,
+    createTimeLabel:string,
 }

@@ -1,0 +1,27 @@
+<div class="list-wrapper">
+    <div class="comment-logo">
+
+        <button class="hide-button" (click)="hideComments()">
+            <div *ngIf="commentsVisible==true">
+                <h5>Комментарии <i class="fa-solid fa-caret-right"></i></h5>
+            </div>
+            <div *ngIf="commentsVisible==false">
+                <h5><i class="fa-solid fa-caret-left"></i> Комментарии</h5>
+            </div>
+        </button>
+    </div>
+    <div id="comment-section" class="hide">
+        <div *ngIf="commentsList">
+            <div class="comment-block">
+                <div class="post-item" *ngFor="let item of commentsList; let i=index">
+                    <div class="comment-author" (click)="goToProfile(item.authorId)"><button class="post-link"><strong>{{item.authorLogin}}</strong></button>
+                    </div>
+                    <div class="comment-text">{{item.text}}</div>
+                    <div class="comment-post" (click)="goToPost(item.postId)"><button class="post-link">{{item.postTitle}}</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

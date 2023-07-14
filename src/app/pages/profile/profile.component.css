@@ -1,0 +1,115 @@
+.profile-wrapper{
+    margin-bottom: 8px;
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.profile-header{
+    display: grid;
+}
+.profile-img{
+    width: 140px;
+    height: 140px;
+}
+
+.profile-buttons{
+    grid-row: 1;
+    grid-column: 2;
+    align-self: start;
+    text-align: end;
+}
+
+.profile-name{
+    margin-top: 20px;
+}
+
+.post-item{
+    border-radius: 8px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.list-wrapper{
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.post-header{
+    display: flex;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-right: 20px;
+    flex-direction: row;
+}
+
+.header-theme{
+    margin-right: 15px;
+}
+
+.header-author{
+    margin-right: 15px;
+}
+.header-createTime{
+    color: #595959;
+}
+
+.post-title{
+    margin-bottom: 8px;
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.post-body{
+    /* white-space: pre;  */
+    margin-bottom: 8px;
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    -webkit-line-clamp: 4; 
+    display: -webkit-box; 
+    -webkit-box-orient: vertical; 
+    overflow: hidden; 
+}
+
+.post-footer{
+    padding-bottom: 16px;
+    margin-top: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+}
+.post-img{
+    max-width: 640px;
+    max-height: 360px;
+}
+
+.post-img-container{
+    display: flex;
+    background-color: rgb(220 220 220);
+    justify-content: center;
+}
+
+.post-bookmark{
+margin-left: 15px;
+}
+
+.post-link{
+    background-color: inherit;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+::ng-deep .p-tabview .p-tabview-panels{
+    background-color: none !important;
+}

@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { IUser } from 'src/app/modals/user';
 
 @Injectable({
@@ -10,7 +12,7 @@ export class UserService {
   loggedIn: boolean | undefined;
   token!:string | null;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getUser(): IUser { 
     let userD = window.localStorage.getItem('userData');
@@ -23,7 +25,7 @@ export class UserService {
    
    setUser(user: IUser) {
     if(user.id){
-      user.password = "";
+      delete user.password;
       window.localStorage.setItem('userData', JSON.stringify(user))
     }
     return this.user = user;
@@ -34,20 +36,12 @@ export class UserService {
     window.localStorage.setItem('user_token', JSON.stringify(token))
    }
 
-   
-  //  getToken(): string { 
-  //     if(this.token){
-  //       return this.token;
-  //     }else{
-  //       let token: any = window.localStorage.getItem('user_token');
-  //       return token;
-  //     }
-  //  };
-  //  removeToken(): void{
-  //   this.token = null;
-  //   window.localStorage.removeItem('user_token');
-  //  }
-  //  setToStore(token: string) {  window.localStorage.setItem('userToken', token);}
+   getSpecificUser(id:string): Observable<IUser>{
+    return this.http.get<IUser>(`http://localhost:5400/user/${id}`);
+  }
 
-
+   logOut():void{
+    window.localStorage.removeItem('user_token')
+    window.localStorage.removeItem('userData')
+   }
 }
