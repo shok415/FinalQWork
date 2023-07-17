@@ -7,6 +7,9 @@
         <div class="profile-name">
             <h3>{{user.login}}</h3>
         </div>
+        <div clas="regDate">
+            Дата регистрации: {{user.registrationDate}}
+        </div>
     </div> 
 </div>
 
@@ -28,21 +31,17 @@
         
                     
                     <div class="post-footer">
-                        <div class="comment-count">
-                            <i class="fa-regular fa-comment"></i>
-                            
-                        </div>
-                        <div class="post-bookmark">
+                        <button class="post-link" (click)="addToBookmark(item)">
                             <i class="fa-regular fa-bookmark" style="width: 16px; text-align: center;"></i>
-                        </div>
+                        </button>
                     </div>
                  </div> 
              </div> 
 
 
 
-        </p-tabPanel>
+        </p-tabPanel> 
     </p-tabView>    
 
 
-    
+<p-toast position="bottom-right"><figure></figure></p-toast>    

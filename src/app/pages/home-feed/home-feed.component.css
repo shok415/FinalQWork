@@ -1,7 +1,11 @@
 .main-container{
     display: flex;
     flex: 1;
-    background-color: rgb(238 239 238);
+    /* background-color: rgb(238 239 238);
+    background-image: url('src/assets/img/background2.jpg'); */
+    background: linear-gradient(rgb(238 239 238 / 89%), #eeeff0cf), url('src/assets/img/background.png');
+    background-attachment: fixed;
+    min-height: calc(100vh - 120px);
 }
 ::ng-deep .p-menubar{
     border-radius: 0;

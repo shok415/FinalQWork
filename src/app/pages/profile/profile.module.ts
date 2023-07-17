@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProfileComponent } from './profile.component';
 import { TabViewModule } from 'primeng/tabview';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
   declarations: [
@@ -9,7 +10,8 @@ import { TabViewModule } from 'primeng/tabview';
   ],
   imports: [
     CommonModule,
-    TabViewModule
+    TabViewModule,
+    ToastModule
   ]
 })
 export class ProfileModule { }

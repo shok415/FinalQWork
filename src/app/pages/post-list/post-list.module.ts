@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PostListComponent } from './post-list.component';
+import { ToastModule } from 'primeng/toast';
 
 
 
@@ -9,7 +10,8 @@ import { PostListComponent } from './post-list.component';
     PostListComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ToastModule
   ]
 })
 export class PostListModule { }

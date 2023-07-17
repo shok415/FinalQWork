@@ -24,7 +24,8 @@ margin-bottom: 2px;
 height: 44px;
 text-align: start;
 padding-left: 20px;
-background-color: rgb(238 239 238);
+/* background-color: rgb(238 239 238); */
+background-color: inherit;
 }
 
 .side-button:hover{

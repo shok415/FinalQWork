@@ -20,6 +20,7 @@ import { PostListModule } from '../post-list/post-list.module';
 import { ProfileModule } from '../profile/profile.module';
 import { PostItemModule } from '../post-item/post-item.module';
 import { CommentSectionComponent } from '../comment-section/comment-section.component';
+import { SettingsModule } from '../settings/settings.module';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { CommentSectionComponent } from '../comment-section/comment-section.comp
     InputTextareaModule,
     PostListModule,
     ProfileModule,
-    PostItemModule
+    PostItemModule,
+    SettingsModule
   ],
   providers:[
     MessageService]

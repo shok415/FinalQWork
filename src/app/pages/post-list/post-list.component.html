@@ -9,7 +9,8 @@
             </div>
             <div class="post-title"><button class="post-link" (click)="goToPost(item)"><h4>{{item.title}}</h4></button></div>
             <div *ngIf="item.img">
-                <div class="post-img-container"><img class="post-img" src="http://localhost:5400/public/{{item.img}}" /></div>
+                <!-- <div class="post-img-container"><img class="post-img"  src="http://localhost:5400/public/{{item.img}}" /></div> -->
+                <div class="post-img-container"><div class="post-img"  style="background-image: url('http://localhost:5400/public/{{item.img}}'); background-size: cover; background-repeat: no-repeat; background-position: center center;"></div>
             </div>
             <div class="post-body">{{item.body}}</div>
 
@@ -29,6 +30,6 @@
     </div>
 </div>
 
-
+<p-toast position="bottom-right"><figure></figure></p-toast>
 
 

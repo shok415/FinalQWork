@@ -94,7 +94,7 @@ export class HomeFeedComponent implements OnInit, OnChanges{
     formParams.append("rating", "0")
     formParams.append("createTime", d.toISOString())
     this.postService.createPost(formParams).subscribe(()=> {})
-    //window.location.reload()
+    window.location.reload()
   }
 
   selectFile(ev:any):void{

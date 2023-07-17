@@ -1,6 +1,7 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
+import { UserService } from 'src/app/services/user/user.service';
 
 @Component({
   selector: 'app-aside',
@@ -10,13 +11,21 @@ import { MenuItem } from 'primeng/api';
 export class AsideComponent implements OnInit {
   sideitems: MenuItem[] = [];
   sideMenuVisible: any
+  user!:any
   constructor(
-    private router: Router
+    private router: Router,
+    private userService:UserService
   ) { }
   @Input() menuType: any;
   ngOnInit(): void {
-
-  }
+    this.user = this.userService.getUser()
+    if (!this.user.id){
+      var button = document.getElementById("bookmark");
+      if (button) {
+        button.classList.add("hide");
+      }
+    }
+  } 
 
   goPopular() {
     this.router.navigate(['popular'])

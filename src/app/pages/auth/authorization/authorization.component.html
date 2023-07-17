@@ -1,15 +1,17 @@
 <div class="d-flex flex-column ">
     <div class="mt-2">
            <span class="mx-1">Логин</span>
-           <input type="text" pInputText [ngClass]="{'input-error': !login}" [(ngModel)]="login" />
+           <input id="loginA" type="text" pInputText [ngClass]="{'input-error': !login}" [(ngModel)]="login" (keyup)="checkLoginInput()"/>
+           <small id="login-helpA" class="hide" style="color: red;">Логин должен содержать не менее 3 символов.</small>
     </div>
 
     <div class="mt-2">
            <span class="mx-1">Пароль</span>
-           <input type="text" pInputText [ngClass]="{'input-error': !password}" [(ngModel)]="password" />
+           <input id="passwordA" type="password" pInputText [ngClass]="{'input-error': !password}" [(ngModel)]="password" (keyup)="checkPasswordInput()"/>
+           <small id="password-helpA" class="hide mx-1" style="color: red;">Пароль должен содержать не менее 3 символов.</small>
     </div>
 
     <div>
-           <button type="button" (click)="onAuth($event)" class='my-3 btn btn-primary'>Войти</button>
+           <button id="authButton" type="button" (click)="onAuth($event)" class='my-3 btn btn-primary' [disabled]="buttonDisabled">Войти</button>
     </div>
 </div>

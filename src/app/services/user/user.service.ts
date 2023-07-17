@@ -44,4 +44,8 @@ export class UserService {
     window.localStorage.removeItem('user_token')
     window.localStorage.removeItem('userData')
    }
+
+   getUserBooks(id:string): Observable<IUser>{
+    return this.http.get<IUser>(`http://localhost:5400/user/bookmarks/${id}`);
+  }
 }

@@ -8,9 +8,9 @@
         </div>
         <div class="section-center">
             <div class="search-field">
-                <input [(ngModel)]="ticketSearchValue" pInputText class="search" type="text" placeholder="Search" class="w-full" />
+                <input [(ngModel)]="ticketSearchValue" pInputText class="search" type="text" placeholder="Поиск" class="w-full" /><button class="search-button" (click)="goFind()">Найти</button>
             </div>
-            <button class="search-button" (click)="goFind()">Найти</button>
+            <!-- <button class="search-button" (click)="goFind()">Найти</button> -->
             <div *ngIf="user.id">
                 <button class="button-create" data-bs-toggle="modal" data-bs-target="#createPost">
                     <div class="fa fa-pencil" aria-hidden="true"> Создать</div>
@@ -25,7 +25,7 @@
                 </button>
                 <ul class="dropdown-menu">
                     <li><button class="dropdown-item" (click)="goToProfile()"><i class="fa fa-user"></i> Профиль</button></li>
-                    <!-- <li><button class="dropdown-item" routerLink="profile"><i class="fa fa-cog"></i> Настройки</button></li>  -->
+                    <li><button class="dropdown-item" (click)="goToSettings()"><i class="fa fa-cog"></i> Настройки</button></li> 
                     <li><button class="dropdown-item" (click)="logOut()"><i class="fa fa-sign-out"></i> Выйти</button></li>
                 </ul>
             </div>

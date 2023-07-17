@@ -24,6 +24,7 @@
     border: none;
     padding-top: 10px;
     margin-left: 10px;
+    background-color: inherit;
 }
 
 .comment-post{

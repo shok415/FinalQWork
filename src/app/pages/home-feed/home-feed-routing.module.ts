@@ -4,6 +4,7 @@ import { HomeFeedComponent } from './home-feed.component';
 import { PostListComponent } from '../post-list/post-list.component';
 import { ProfileComponent } from '../profile/profile.component';
 import { PostItemComponent } from '../post-item/post-item.component';
+import { SettingsComponent } from '../settings/settings.component';
 
 const routes: Routes = [
   {
@@ -11,7 +12,7 @@ const routes: Routes = [
     component: HomeFeedComponent,
     children: [
       {
-        path: 'popular',
+        path: '',
         component: PostListComponent, 
       },
       {
@@ -34,11 +35,10 @@ const routes: Routes = [
         path: 'post/:id',
         component: PostItemComponent
       },
-      
-      // {
-      //   path: 'profile',
-      //   loadChildren: ()=> import('../profile/profile.module').then(m => m.ProfileModule)
-      // }
+      {
+        path: 'profile/settings/:id',
+        component: SettingsComponent
+      }
     ]
   }
 ];

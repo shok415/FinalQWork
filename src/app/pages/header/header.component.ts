@@ -42,6 +42,15 @@ export class HeaderComponent implements OnInit, AfterViewInit{
     }
   }
 
+  goToSettings(){
+    this.router.navigate([`/profile/settings/${this.user.id}`])
+    var buttons = document.getElementsByClassName('side-button');
+    for (var i = 0; i < buttons.length; ++i) {
+      var item = buttons[i];
+      item.classList.remove("active");
+    }
+  }
+
   goFind() {
     if (this.ticketSearchValue.length>3){
       this.router.navigate([`/search/${this.ticketSearchValue}`])
@@ -55,7 +64,7 @@ export class HeaderComponent implements OnInit, AfterViewInit{
 
   logOut(){
     this.userService.logOut()
-    window.location.href = 'popular'
+    window.location.href = 'new'
   }
 
   @Output() menuStyle: any = new EventEmitter()

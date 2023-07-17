@@ -1,0 +1,38 @@
+<div class="profile-wrapper">
+    <div class="profile-header">
+        <img class="profile-img" src="http://localhost:5400/public/def-logo.png" />
+    </div>
+     <div *ngIf="user"> 
+        <div class="profile-name">
+            <h3>{{user.login}}</h3>
+        </div>
+    </div> 
+    <p-tabView>
+        <!-- <p-tabPanel header="Статистика">
+         
+        </p-tabPanel> -->
+        <p-tabPanel header="Смена пароля">
+            <div style="margin-top: 15px;">
+                <div>
+                    <div>
+                        <span class="mt-3">Текущий пароль</span>
+                        <input type="password" pInputText [ngClass]="{'input-error': !currentPsw}" [(ngModel)]="currentPsw" />
+                    </div>
+                    <div>
+                        <span class="mt-3">Новый пароль</span>
+                        <input type="password" class="mt-1" pInputText [ngClass]="{'input-error': !newPsw}" [(ngModel)]="newPsw" />
+                    </div>
+                    <div>
+                        <span class="mt-3">Повтор нового пароля</span>
+                        <input type="password" class="mt-1" pInputText [ngClass]="{'input-error': !newPswRepeat}"
+                            [(ngModel)]="newPswRepeat" />
+                    </div>
+                </div>
+                <div class="mt-5 d-flex justify-content-center">
+                    <button (click)="changePsw($event)" type="button" class="btn btn-success">Сменить пароль</button>
+                </div>
+            </div>
+        </p-tabPanel>
+    </p-tabView>
+</div>
+<p-toast position="bottom-right"><figure></figure></p-toast>   

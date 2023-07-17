@@ -2,12 +2,12 @@
     <div>
         <span class="mx-1">Логин</span>
         <input id="login" type="text"  pInputText  [(ngModel)]="login" (keyup)="checkLoginInput()"/>
-        <small id="login-help" class="hide" style="color: red;">Логин должен содержать не менне 3 символов.</small>
+        <small id="login-help" class="hide" style="color: red;">Логин должен содержать не менее 3 символов.</small>
     </div>
     <div class="mt-2">
         <span class="mx-1">Пароль</span>
         <input id="password" (keyup)="checkPasswordInput()" type="password" pInputText [(ngModel)]="password" />
-        <small id="password-help" class="hide mx-1" style="color: red;">Пароль должен содержать не менне 3 символов.</small>
+        <small id="password-help" class="hide mx-1" style="color: red;">Пароль должен содержать не менее 3 символов.</small>
     </div>
 
 
@@ -20,7 +20,7 @@
 
     <div class="mt-2">
         <span class="mx-1">Почта</span>
-        <input type="text" pInputText [(ngModel)]="email" />
+        <input type="email" pInputText [(ngModel)]="email" />
     </div>
 
 </div>

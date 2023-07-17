@@ -26,4 +26,8 @@ export class PostService {
   getUsersPost(id:string): Observable<IPost[]>{
     return this.http.get<IPost[]>(`http://localhost:5400/post/user/${id}`);
   }
+
+  getBookMarksPosts(body: any):Observable<any>{
+    return this.http.post('http://localhost:5400/post/bookmarks', body, {headers:{}})
+  }
 }
